@@ -1,0 +1,287 @@
+/* docs.less - Premium Documentation Styles */
+/* variables.less */
+:root {
+  --primary-glow: rgba(0, 230, 118, 0.4);
+  --sidebar-width: 280px;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+body.docs-page {
+  background-color: #0b0f19;
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+/* --- Layout --- */
+.docs-layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  min-height: 100vh;
+}
+/* --- Sidebar --- */
+.docs-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: #0a0d14;
+  border-right: 1px solid var(--glass-border);
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+.docs-sidebar .docs-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+.docs-sidebar .docs-logo i {
+  color: #00e676;
+  font-size: 1.5rem;
+}
+.docs-sidebar .docs-nav-group {
+  margin-bottom: 2rem;
+}
+.docs-sidebar .docs-nav-group .docs-nav-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.docs-sidebar .docs-nav-group .docs-nav-links {
+  list-style: none;
+  padding: 0;
+}
+.docs-sidebar .docs-nav-group .docs-nav-links li {
+  margin-bottom: 0.5rem;
+}
+.docs-sidebar .docs-nav-group .docs-nav-links li a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0 6px 6px 0;
+  color: #94a3b8;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+}
+.docs-sidebar .docs-nav-group .docs-nav-links li a:hover {
+  color: #ffffff;
+  background: var(--glass-bg);
+}
+.docs-sidebar .docs-nav-group .docs-nav-links li a.active {
+  color: #00e676;
+  background: rgba(0, 230, 118, 0.08);
+  border-left-color: #00e676;
+  font-weight: 600;
+}
+@media (max-width: 1024px) {
+  .docs-sidebar {
+    transform: translateX(-100%);
+  }
+  .docs-sidebar.open {
+    transform: translateX(0);
+  }
+}
+/* --- Main Content --- */
+.docs-main {
+  grid-column: 2;
+  padding: 4rem 6rem;
+  max-width: 1000px;
+}
+@media (max-width: 1024px) {
+  .docs-main {
+    grid-column: 1;
+    padding: 6rem 2rem;
+  }
+}
+.docs-section {
+  margin-bottom: 6rem;
+  scroll-margin-top: 100px;
+}
+.docs-section h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.docs-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.docs-section h2 i {
+  color: #00e676;
+}
+.docs-section h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  color: #ffffff;
+}
+.docs-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #94a3b8;
+  margin-block: 0.5rem;
+}
+/* --- Components --- */
+.docs-card {
+  background: #131a2a;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.docs-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.docs-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+.docs-feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.feature-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.feature-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 230, 118, 0.1);
+  color: #00e676;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.step-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.step-number {
+  width: 36px;
+  height: 36px;
+  background: #00e676;
+  color: #0b0f19;
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+.step-number.blue {
+  background: #3b82f6;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+/* --- Badges --- */
+.docs-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  background: rgba(0, 230, 118, 0.1);
+  color: #00e676;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(0, 230, 118, 0.1);
+}
+.docs-badge.blue {
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  border-color: rgba(59, 130, 246, 0.2);
+}
+/* --- Alerts --- */
+.docs-alert {
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.docs-alert.info {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+.docs-alert.warning {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+.docs-alert i {
+  font-size: 1.25rem;
+}
+/* --- Code Block --- */
+pre {
+  background: #011627;
+  padding: 1.5rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  border: 1px solid var(--glass-border);
+  margin: 1.5rem 0;
+}
+code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+}
+/* --- Mobile --- */
+.docs-hamburger {
+  display: none;
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  background: #00e676;
+  color: #0b0f19;
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .docs-hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

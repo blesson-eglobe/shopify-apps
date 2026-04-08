@@ -5,12 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
     
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        if (navbar) {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         }
     });
+
 
     // --- Mobile Hamburger Toggle ---
     const hamburger = document.getElementById('hamburger');
@@ -36,14 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Smooth Scrolling for Anchor Links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+            if (targetId === '#' || !targetId.startsWith('#')) return;
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                const navHeight = navbar.offsetHeight;
+                e.preventDefault();
+                const navHeight = navbar ? navbar.offsetHeight : 0;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - navHeight;
   
@@ -54,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
 
     // --- Scroll Animations (Intersection Observer) ---
     // Select elements to animate
@@ -166,4 +169,106 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.1 });
 
     counterElements.forEach(el => counterObserver.observe(el));
+
+    // --- Documentation Template Logic ---
+    // This section handles sidebar interactivity and responsiveness for the documentation template.
+    
+    const docsSidebar = document.querySelector('.docs-sidebar');
+    const docsHamburger = document.querySelector('.docs-hamburger');
+    const docsNavLinks = document.querySelectorAll('.docs-nav-links a');
+    const docsSections = document.querySelectorAll('.docs-section');
+
+    // Toggle Mobile Sidebar for Documentation
+    if (docsHamburger && docsSidebar) {
+        docsHamburger.addEventListener('click', () => {
+            docsSidebar.classList.toggle('open');
+            const icon = docsHamburger.querySelector('i');
+            if (docsSidebar.classList.contains('open')) {
+                icon.className = 'bx bx-x';
+            } else {
+                icon.className = 'bx bx-menu';
+            }
+        });
+    }
+
+    // Scroll Active Link Highlighting for Documentation
+    if (docsSections.length > 0) {
+        const docsObserverOptions = {
+            root: null,
+            rootMargin: '-10% 0px -60% 0px',
+            threshold: 0
+        };
+
+
+        const docsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    updateDocsActiveLink(id);
+                }
+            });
+        }, docsObserverOptions);
+
+        docsSections.forEach(section => docsObserver.observe(section));
+
+        function updateDocsActiveLink(id) {
+            // Only update if we have a valid section ID
+            if (!id || id === ' ' || id === '#') return;
+
+            docsNavLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+    }
+
+    // Handle sidebar link clicks
+    docsNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const href = link.getAttribute('href');
+            
+            // Only handle internal section links
+            if (href && href.startsWith('#') && href !== '#') {
+                const id = href.replace('#', '');
+                if (typeof updateDocsActiveLink === 'function') {
+                    updateDocsActiveLink(id);
+                }
+            }
+
+            // Mobile drawer handling
+
+            if (window.innerWidth <= 1024 && docsSidebar) {
+                docsSidebar.classList.remove('open');
+                if (docsHamburger) {
+                    const icon = docsHamburger.querySelector('i');
+                    icon.className = 'bx bx-menu';
+                }
+            }
+        });
+    });
+
+
+    // --- Accordion Toggle Logic ---
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Optional: Close other items (exclusive accordion)
+            document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+            
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+
 });
+

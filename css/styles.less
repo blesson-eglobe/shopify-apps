@@ -67,23 +67,28 @@
 .icon-cap-black { background: rgba(0, 0, 0, 0.08); color: #0a0d14; }
 
 .badge-center {
-    margin: 0 auto 1rem auto;
-    display: table;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 auto 2rem auto !important;
 }
 
 .section-badge {
     display: inline-block;
-    padding: 0.25rem 0.75rem;
+    padding: 0.4rem 1.25rem;
     border-radius: @radius-pill;
-    font-size: 0.875rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    margin-bottom: @space-sm;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 .header-badge {
     color: @primary-green;
     background: rgba(0, 230, 118, 0.1);
+    border: 1px solid rgba(0, 230, 118, 0.25);
 }
+
+
 
 section {
     padding: @space-xl 0;
@@ -1627,3 +1632,99 @@ section {
         padding: 1.5rem;
     }
 }
+
+
+/* --- FAQ Section --- */
+.faq-section {
+    background: @dark-bg !important;
+    padding: 120px 0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: @text-light !important;
+
+    h2 {
+        color: @text-light !important;
+        margin-top: 0;
+    }
+}
+
+/* --- Accordion --- */
+.accordion {
+    margin: 4.5rem auto 0 auto;
+    max-width: 850px;
+
+
+
+    .accordion-item {
+        background: @dark-surface;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: @radius-md;
+        margin-bottom: 1.25rem;
+        overflow: hidden;
+        transition: all @transition-normal;
+
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: lighten(@dark-surface, 2%);
+        }
+
+        &.active {
+            border-color: @primary-green;
+            background: rgba(0, 230, 118, 0.03);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+            .accordion-header i {
+                transform: rotate(180deg);
+                color: @primary-green;
+            }
+
+            .accordion-content {
+                max-height: 500px;
+                padding: 0 1.75rem 1.75rem;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    .accordion-header {
+        padding: 1.5rem 1.75rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+
+        h4 {
+            margin: 0;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: @text-light;
+            letter-spacing: -0.01em;
+        }
+
+        i {
+            font-size: 1.5rem;
+            color: @text-muted;
+            transition: all @transition-normal;
+        }
+    }
+
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 1.75rem;
+        opacity: 0;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateY(-8px);
+
+        p {
+            margin: 0 !important;
+            font-size: 1rem !important;
+            color: @text-muted !important;
+            line-height: 1.7 !important;
+        }
+    }
+}
+
+
+/* --- Alerts --- */
