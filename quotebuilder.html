@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuoteBuilder - Shopify Negotiation & Custom Pricing App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- BoxIcons for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- LESS Styles -->
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="index.html" class="logo">
+                    <i class='bx bxs-store'></i>
+                    <span>AppStoreHub</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-submenu">
+                        <a href="index.html#featured-apps">Apps <i class='bx bx-chevron-down'></i></a>
+                        <div class="submenu">
+                            <div class="submenu-inner">
+                                <a href="mealbot.html" class="submenu-item">
+                                    <div class="submenu-icon icon-green"> <svg width="24" height="24"
+                                            viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="24" height="22.38" rx="3" fill="url(#paint0_linear_110_2)" />
+                                            <path
+                                                d="M20.2314 11.3485C20.2314 13.5316 19.3641 15.6253 17.8205 17.169C16.2768 18.7127 14.1831 19.5799 12 19.5799C9.81693 19.5799 7.72326 18.7127 6.17958 17.169C4.63591 15.6253 3.76868 13.5316 3.76868 11.3485L5.00662 11.3485C5.00662 13.2033 5.74342 14.9821 7.05494 16.2936C8.36646 17.6051 10.1453 18.3419 12 18.3419C13.8548 18.3419 15.6336 17.6051 16.9451 16.2936C18.2566 14.9821 18.9934 13.2033 18.9934 11.3485L20.2314 11.3485Z"
+                                                fill="#433131" />
+                                            <path
+                                                d="M3.862 11.3486L10.9174 11.3486L10.8698 12.5432L3.862 12.5332V11.3486Z"
+                                                fill="#433131" />
+                                            <path d="M17.5436 11.3486H20.1194L20.102 12.5432L17.5436 12.5332V11.3486Z"
+                                                fill="#433131" />
+                                            <path
+                                                d="M9.57647 16.2548L15.1077 10.8539L15.1728 11.4644L15.7578 11.4016L11.9385 15.0972L16.2085 12.7424L16.1871 13.2078L16.6807 13.3974L10.2218 16.9794M14.313 11.6251L14.3241 12.2112L15.017 12.0647M15.4849 13.1788L15.2495 13.6677L15.9684 13.7657"
+                                                stroke="#523C3C" stroke-width="0.4" />
+                                            <path
+                                                d="M18.0632 2.8186C18.1563 2.82404 18.2443 2.86308 18.3102 2.92896C18.3761 2.99482 18.4152 3.08306 18.4206 3.17603C18.5609 5.56438 17.8593 7.49621 16.5378 8.38696C16.4952 8.41569 16.4518 8.44343 16.4079 8.46997C15.9509 8.74748 15.4261 8.89351 14.8913 8.89185C14.3381 8.88496 13.7938 8.7484 13.3034 8.49243H13.3024L13.1677 8.67505C12.8734 9.11263 12.715 9.62979 12.7165 10.1604V11.5647C12.7165 11.6654 12.6764 11.762 12.6052 11.8333C12.5339 11.9044 12.4374 11.9445 12.3366 11.9446C12.2357 11.9446 12.1384 11.9045 12.0671 11.8333C11.9959 11.762 11.9557 11.6654 11.9557 11.5647V10.1985L10.7634 9.00708L10.7643 9.0061L10.7624 9.00708C10.413 9.17998 10.0292 9.27275 9.63934 9.27759C9.23772 9.27756 8.84337 9.16651 8.50067 8.95728C7.46237 8.32859 6.90511 6.87715 7.01141 5.07544C7.01694 4.98258 7.0569 4.89513 7.12274 4.82935C7.18858 4.76363 7.27594 4.72353 7.36884 4.71802C9.17234 4.61228 10.6254 5.16887 11.2546 6.2063C11.6605 6.8793 11.6747 7.68968 11.3024 8.46704H11.3005L11.3024 8.46899L12.0778 9.24731L12.0798 9.24634C12.2095 8.7742 12.4403 8.33603 12.7556 7.96118L12.7565 7.96216L12.7556 7.96021C12.2017 6.88496 12.2002 5.7574 12.7624 4.82935C13.0817 4.30279 13.5605 3.86826 14.1638 3.53833C14.2642 3.48337 14.368 3.43117 14.4753 3.38208C15.441 2.94006 16.6751 2.73822 18.0632 2.8186ZM10.7184 7.88306C10.8694 7.4257 10.8324 6.98166 10.6013 6.60083C10.1579 5.86982 9.10879 5.45463 7.75848 5.46606V5.40845L7.75751 5.46704C7.7475 6.81598 8.16165 7.86394 8.89325 8.30688C9.27528 8.53799 9.72016 8.57639 10.1784 8.42505V8.42212L9.01532 7.26001C8.94706 7.18815 8.90956 7.09247 8.91083 6.99341C8.91213 6.89436 8.95206 6.7998 9.02216 6.72974C9.09233 6.65963 9.18758 6.61968 9.2868 6.61841C9.38587 6.61726 9.48157 6.65472 9.55341 6.7229L10.7175 7.88599V7.88501L10.7184 7.88306ZM17.6755 3.56177C15.7832 3.51758 14.279 4.05166 13.5505 5.02173C13.5019 5.08636 13.4572 5.15346 13.4157 5.22192L13.3464 5.34204C13.0239 5.95322 13.0177 6.65843 13.32 7.37329H13.321L15.8815 4.8186C15.9535 4.75032 16.0499 4.71284 16.1491 4.71411C16.2482 4.71542 16.3427 4.75552 16.4128 4.82544C16.4829 4.89545 16.5227 4.99012 16.5241 5.08911C16.5254 5.1882 16.4879 5.28385 16.4196 5.35571L13.86 7.91431L13.862 7.91626H13.86C14.5753 8.21683 15.2803 8.20924 15.8923 7.88892C15.9332 7.86749 15.9743 7.84479 16.0143 7.82056C17.1122 7.15613 17.7222 5.57868 17.6765 3.56274H17.696L17.6755 3.56177Z"
+                                                fill="#433131" stroke="white" stroke-width="0.00185804" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_110_2" x1="2.01" y1="-4.6413e-07"
+                                                    x2="20.3461" y2="23.0435" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#A8E063" />
+                                                    <stop offset="1" stop-color="#56AB2F" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg></div>
+                                    <div class="submenu-text">
+                                        <h4>Mealbot</h4>
+                                        <p>AI-powered meal planning</p>
+                                    </div>
+                                </a>
+                                <a href="quotebuilder.html" class="submenu-item">
+                                    <div class="submenu-icon icon-black"> <svg width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="24" height="24" rx="3" fill="url(#paint0_linear_111_9)" />
+                                            <path d="M18.9796 19.23L15.3096 17.9L17.8296 15.74L18.9796 19.23Z"
+                                                fill="#FFFEFE" />
+                                            <path
+                                                d="M12 5.48631C15.7248 5.48631 18.71 8.42131 18.71 12C18.71 15.5787 15.7248 18.5137 12 18.5137C8.27521 18.5136 5.29004 15.5787 5.29004 12C5.29005 8.42132 8.27521 5.48633 12 5.48631Z"
+                                                stroke="white" stroke-width="1.5" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_111_9" x1="12" y1="0" x2="12" y2="24"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#2C3338" />
+                                                    <stop offset="0.35" stop-color="#3A4146" />
+                                                    <stop offset="0.6" stop-color="#12181C" />
+                                                    <stop offset="1" stop-color="#050708" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg></div>
+                                    <div class="submenu-text">
+                                        <h4>QuoteBuilder</h4>
+                                        <p>Custom quotes & discounts</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="index.html#why-choose-us">Features</a></li>
+                </ul>
+                <a href="#" class="btn btn-primary">Contact Us</a>
+                <!-- Hamburger -->
+                <button class="hamburger" id="hamburger" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <!-- Mobile Drawer -->
+            <div class="mobile-drawer" id="mobile-drawer">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="index.html#featured-apps" class="mobile-nav-link">Apps</a>
+                <a href="index.html#why-choose-us" class="mobile-nav-link">Features</a>
+                <a href="#" class="btn btn-primary mobile-cta">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-quotebuilder">
+            <div class="hero-quotebuilder-bg"></div>
+            <div class="hero-quotebuilder-glow"></div>
+            <div class="container hero-quotebuilder-content">
+                <div class="badge-center">
+                    <span class="badge"
+                        style="display:inline-flex; align-items:center; gap:0.6rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: #60a5fa; padding: 0.4rem 1.25rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 2rem;">
+                        <i class='bx bxs-briefcase'></i> B2B / Wholesale / Custom Pricing
+                    </span>
+                </div>
+                <div style="display: flex; justify-content: center; margin-bottom: 1.5rem;">
+                    <div style="background: linear-gradient(135deg, rgba(147, 197, 253, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%); padding: 18px; border-radius: 24px; box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15); display: inline-flex; align-items: center; justify-content: center; backdrop-filter: blur(10px);">
+                         <img src="./assets/img/quill_qoute.svg" alt="QuoteBuilder Logo" style="width: 64px; height: 64px; display: block;">
+                    </div>
+                </div>
+                <h1 class="hero-title">Meet <span
+                        style="background: linear-gradient(90deg, #93c5fd, #3b82f6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">QuoteBuilder</span>
+                </h1>
+                <p class="hero-description">
+                    A Shopify app that enables negotiation-driven commerce. Allow customers to request custom pricing on
+                    selected products—giving you control while offering them flexibility.
+                </p>
+                <div class="hero-buttons" style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="#install" class="btn btn-primary"
+                        style="background-color: #3b82f6; border-color: #3b82f6;">Get the App &rarr;</a>
+                    <a href="#capabilities" class="btn btn-outline">Explore Features</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Value Section -->
+        <section class="why-choose-us">
+            <div class="container">
+                <div class="text-center badge-center"><span class="header-badge section-badge"
+                        style="color: #3b82f6; background: rgba(59, 130, 246, 0.1);">Business Impact</span>
+                </div>
+                <h2 class="section-title text-center">Turn Hesitation into Conversions</h2>
+                <p class="section-subtitle">Bridge the gap between fixed pricing and flexible deals with controlled
+                    negotiation tools.</p>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon icon-blue"><i class='bx bx-trending-up'></i></div>
+                        <h3 class="feature-title">Increase Conversion</h3>
+                        <p class="feature-description">Stop losing high-value sales. Convert price-sensitive shoppers on
+                            high-ticket products by allowing them to negotiate.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon icon-purple"><i class='bx bx-customize'></i></div>
+                        <h3 class="feature-title">Personalized Pricing</h3>
+                        <p class="feature-description">Enable a deeply personalized pricing strategy adapted
+                            specifically to your bulk buyers or B2B partners.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon icon-orange"><i class='bx bx-magnet'></i></div>
+                        <h3 class="feature-title">Capture Lost Leads</h3>
+                        <p class="feature-description">Keep customers engaged. Capture leads who might typically abandon
+                            your site because they expect a discount.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon icon-pink"><i class='bx bx-refresh'></i></div>
+                        <h3 class="feature-title">Seamless Order Flow</h3>
+                        <p class="feature-description">Automatically transfer approved quotes over to your Shopify core
+                            as Draft Orders for perfectly seamless checkouts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Capabilities -->
+        <section class="featured-apps section-dark" id="capabilities">
+            <div class="container">
+                <div class="text-center badge-center"><span class="header-badge section-badge"
+                        style="color: #60a5fa; background: rgba(59, 130, 246, 0.2);">Core Features</span>
+                </div>
+                <h2 class="section-title text-center">Complete Negotiation Control</h2>
+                <p class="section-subtitle">Everything your business needs to manage the entire quoting lifecycle across
+                    admin and storefront.</p>
+
+                <div class="capability-grid quote-capability-grid">
+                    <!-- Capability 1 -->
+                    <div class="capability-card">
+                        <div class="capability-icon icon-cap-black"><i class='bx bx-cart-add'></i></div>
+                        <h3>Interactive Quote Cart</h3>
+                        <ul>
+                            <li>Frontend widget allowing product additions</li>
+                            <li>Customers manage quote items and modify quantities</li>
+                            <li>Input form for expected final pricing</li>
+                        </ul>
+                    </div>
+                    <!-- Capability 2 -->
+                    <div class="capability-card">
+                        <div class="capability-icon icon-cap-green"><i class='bx bx-send'></i></div>
+                        <h3>Customer Price Requests</h3>
+                        <ul>
+                            <li>Directly submit quote applications to admin</li>
+                            <li>Track quote status (pending, approved, rejected)</li>
+                            <li>Revise quotes with configurable attempts allowed</li>
+                        </ul>
+                    </div>
+                    <!-- Capability 3 -->
+                    <div class="capability-card">
+                        <div class="capability-icon icon-blue"><i class='bx bxs-dashboard'></i></div>
+                        <h3>Centralized Admin Hub</h3>
+                        <ul>
+                            <li>Centralized Quote Dashboard for incoming requests</li>
+                            <li>View full quote details including products and notes</li>
+                            <li>Analyze historical quotation success rates</li>
+                        </ul>
+                    </div>
+                    <!-- Capability 4 -->
+                    <div class="capability-card">
+                        <div class="capability-icon icon-purple"><i class='bx bx-check-shield'></i></div>
+                        <h3>Approval Workflow</h3>
+                        <ul>
+                            <li>Approve or reject quotes based on defined rules</li>
+                            <li>Adjust pricing counter-offers before final authorization</li>
+                            <li>Lock-in validity window for approved discounts</li>
+                        </ul>
+                    </div>
+                    <!-- Capability 5 -->
+                    <div class="capability-card">
+                        <div class="capability-icon icon-orange"><i class='bx bx-file'></i></div>
+                        <h3>Professional Deliverables</h3>
+                        <ul>
+                            <li>Generate comprehensive PDFs of finalized quotes</li>
+                            <li>Allow customer to download quotes natively</li>
+                            <li>Customize email templates used in correspondence</li>
+                        </ul>
+                    </div>
+                    <!-- Capability 6 -->
+                    <div class="capability-card">
+                        <div class="capability-icon icon-pink"><i class='bx bxs-lock'></i></div>
+                        <h3>Secure Shopify Checkout</h3>
+                        <ul>
+                            <li>Convert quotes directly into Shopify Draft Orders</li>
+                            <li>Send fully secure and automated checkout links</li>
+                            <li>Bypass general store pricing seamlessly</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Operational Workflow -->
+        <section class="why-choose-us section-dark" id="workflow">
+            <div class="container">
+                <div class="text-center badge-center"><span class="header-badge section-badge"
+                        style="color: #60a5fa; background: rgba(59, 130, 246, 0.2);">Flow</span></div>
+                <h2 class="section-title text-center">Step-by-Step Purchasing Journey</h2>
+                <p class="section-subtitle">See exactly how QuoteBuilder connects the dots from initial interest
+                    directly to paid order.</p>
+
+                <div class="workflow-timeline workflow-timeline-quotebuilder">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>🛒 Add & Request</h3>
+                            <p>The customer adds products of interest to their quote list and submits their expected
+                                custom price.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>📩 Notification & Review</h3>
+                            <p>The admin receives an instant notification detailing the quote, the desired discount, and
+                                any attached notes.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>🔍 Negotiate & Action</h3>
+                            <p>The admin reviews the numbers and can either approve, reject, or present an alternative
+                                counter-offer pricing scheme.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>✅ Approval & Authorization</h3>
+                            <p>Upon final agreement and approval, an automatic checkout link is generated utilizing
+                                Shopify native draft orders.</p>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>💳 Secure Payment</h3>
+                            <p>The customer uses the secure link to seamlessly complete payment, and the final order is
+                                fully created in Shopify.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Differentiators & Future -->
+        <section class="featured-apps">
+            <div class="container">
+                <div class="row" style="display: flex; gap: 4rem; flex-wrap: wrap;">
+
+                    <div style="flex: 1; min-width: 300px;">
+                        <h2 class="section-title">Key Differentiators</h2>
+                        <p class="section-subtitle text-left" style="margin-left: 0; text-align: left;">What separates
+                            us from generic discounting options:</p>
+                        <div class="diff-grid diff-grid-quotebuilder" style="grid-template-columns: 1fr;">
+                            <div class="diff-card">
+                                <h4>Advanced Negotiation Loop</h4>
+                                <span>Most apps are a single ask-and-receive. We allow controlled, multi-revision
+                                    negotiations to ensure you strike the best deal.</span>
+                            </div>
+                            <div class="diff-card">
+                                <h4>Professional PDF Quotes</h4>
+                                <span>Don't settle for simple emails. Provide buyers with highly professional, shareable
+                                    PDF documentation of deals.</span>
+                            </div>
+                            <div class="diff-card">
+                                <h4>Draft Order Architecture</h4>
+                                <span>Built specifically to leverage native Shopify Draft Orders for the most robust
+                                    secure checkout integration available.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="flex: 1; min-width: 300px;">
+                        <div
+                            style="background: #0b0f19; padding: 3rem; border-radius: 16px; color: white; height: 100%;">
+                            <div class="badge-center" style="margin: 0 0 1.5rem 0;"><span
+                                    class="header-badge section-badge"
+                                    style="background: rgba(59, 130, 246, 0.2); color: #60a5fa;">Roadmap</span></div>
+                            <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">
+                                Upcoming Smart Enhancements</h2>
+                            <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6;">We
+                                continually develop features to streamline complex B2B negotiations.</p>
+                            <ul
+                                style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
+                                <li style="display: flex; gap: 1rem; align-items: center;"><i class='bx bx-check-circle'
+                                        style="color: #60a5fa; font-size: 1.5rem;"></i> Product-level discount
+                                    constraint logic</li>
+                                <li style="display: flex; gap: 1rem; align-items: center;"><i class='bx bx-check-circle'
+                                        style="color: #60a5fa; font-size: 1.5rem;"></i> Rules for Premium Customer
+                                    Eligibility</li>
+                                <li style="display: flex; gap: 1rem; align-items: center;"><i class='bx bx-check-circle'
+                                        style="color: #60a5fa; font-size: 1.5rem;"></i> Enhanced administrative timeline
+                                    tracking</li>
+                                <li style="display: flex; gap: 1rem; align-items: center;"><i class='bx bx-check-circle'
+                                        style="color: #60a5fa; font-size: 1.5rem;"></i> Advanced revenue and trends
+                                    analytics dashboard</li>
+                                <li style="display: flex; gap: 1rem; align-items: center;"><i class='bx bx-check-circle'
+                                        style="color: #60a5fa; font-size: 1.5rem;"></i> Visual improvements to quote
+                                    details & emails</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta" id="cta" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6);">
+            <div class="container cta-container">
+                <h2 class="cta-title">Upgrade Your B2B Operations</h2>
+                <p class="cta-subtitle">Capture leads, enable controlled negotiation, and integrate perfectly with
+                    Shopify.</p>
+                <a href="#install" class="btn btn-dark btn-lg">Install QuoteBuilder <i
+                        class='bx bx-right-arrow-alt'></i></a>
+                <p class="cta-guarantee">*14-day free trial on all plans. Built exclusively for Shopify.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo text-light">
+                    <span class="logo-box bg-green"><i class='bx bxs-shopping-bag' style='color:#0a0d14'></i></span>
+                    <span>AppStore Hub</span>
+                </a>
+                <p>Building powerful, reliable apps to help Shopify merchants scale their businesses globally.</p>
+                <div class="social-links">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+                        </svg></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Our Apps</h4>
+                    <ul>
+                        <li><a href="mealbot.html">Mealbot</a></li>
+                        <li><a href="quotebuilder.html">QuoteBuilder</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Partner Program</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2026 AppStoreHub. All rights reserved.</p>
+            <p>Made with <i class='bx bxs-heart text-green'></i> for Shopify Merchants.</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

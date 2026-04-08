@@ -1,0 +1,124 @@
+/* base.less */
+@import "variables.less";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: @font-family-base;
+    line-height: 1.5;
+    color: @text-dark;
+    background-color: @white;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4{
+    line-height: 1.2;
+    text-wrap:balance;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color @transition-fast;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 @space-md;
+}
+
+.section-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: @space-sm;
+    letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+    font-size: clamp(0.9375rem, 2vw, 1.125rem);
+    color: @text-dark-muted;
+    max-width: 600px;
+    margin: 0 auto @space-lg;
+    text-align: center;
+}
+
+// Reusable Button Styles
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.75rem;
+    border-radius: @radius-pill;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all @transition-fast;
+    border: none;
+    outline: none;
+
+    &-primary {
+        background-color: @primary-green;
+        color: @dark-bg;
+
+        &:hover {
+            background-color: @primary-green-hover;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 230, 118, 0.3);
+        }
+    }
+
+    &-outline {
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: @text-light;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    &-dark {
+        background-color: @dark-bg;
+        color: @text-light;
+
+        &:hover {
+            background-color: @dark-surface;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+// Global Breakpoints
+@media (max-width: 1024px) {
+    .section-subtitle {
+        margin-bottom: @space-md;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    .btn {
+        padding: 0.6rem 1.4rem;
+        font-size: 0.9375rem;
+    }
+}

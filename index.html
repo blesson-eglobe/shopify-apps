@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppStoreHub - Supercharge Your Shopify Store</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- BoxIcons for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- LESS Styles -->
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="#" class="logo">
+                    <i class='bx bxs-store'></i>
+                    <span>AppStoreHub</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li class="has-submenu">
+                        <a href="#featured-apps">Apps <i class='bx bx-chevron-down'></i></a>
+                        <div class="submenu">
+                            <div class="submenu-inner">
+                                <a href="mealbot.html" class="submenu-item">
+                                    <div class="submenu-icon icon-green"> <svg width="24" height="24"
+                                            viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="24" height="22.38" rx="3" fill="url(#paint0_linear_110_2)" />
+                                            <path
+                                                d="M20.2314 11.3485C20.2314 13.5316 19.3641 15.6253 17.8205 17.169C16.2768 18.7127 14.1831 19.5799 12 19.5799C9.81693 19.5799 7.72326 18.7127 6.17958 17.169C4.63591 15.6253 3.76868 13.5316 3.76868 11.3485L5.00662 11.3485C5.00662 13.2033 5.74342 14.9821 7.05494 16.2936C8.36646 17.6051 10.1453 18.3419 12 18.3419C13.8548 18.3419 15.6336 17.6051 16.9451 16.2936C18.2566 14.9821 18.9934 13.2033 18.9934 11.3485L20.2314 11.3485Z"
+                                                fill="#433131" />
+                                            <path
+                                                d="M3.862 11.3486L10.9174 11.3486L10.8698 12.5432L3.862 12.5332V11.3486Z"
+                                                fill="#433131" />
+                                            <path d="M17.5436 11.3486H20.1194L20.102 12.5432L17.5436 12.5332V11.3486Z"
+                                                fill="#433131" />
+                                            <path
+                                                d="M9.57647 16.2548L15.1077 10.8539L15.1728 11.4644L15.7578 11.4016L11.9385 15.0972L16.2085 12.7424L16.1871 13.2078L16.6807 13.3974L10.2218 16.9794M14.313 11.6251L14.3241 12.2112L15.017 12.0647M15.4849 13.1788L15.2495 13.6677L15.9684 13.7657"
+                                                stroke="#523C3C" stroke-width="0.4" />
+                                            <path
+                                                d="M18.0632 2.8186C18.1563 2.82404 18.2443 2.86308 18.3102 2.92896C18.3761 2.99482 18.4152 3.08306 18.4206 3.17603C18.5609 5.56438 17.8593 7.49621 16.5378 8.38696C16.4952 8.41569 16.4518 8.44343 16.4079 8.46997C15.9509 8.74748 15.4261 8.89351 14.8913 8.89185C14.3381 8.88496 13.7938 8.7484 13.3034 8.49243H13.3024L13.1677 8.67505C12.8734 9.11263 12.715 9.62979 12.7165 10.1604V11.5647C12.7165 11.6654 12.6764 11.762 12.6052 11.8333C12.5339 11.9044 12.4374 11.9445 12.3366 11.9446C12.2357 11.9446 12.1384 11.9045 12.0671 11.8333C11.9959 11.762 11.9557 11.6654 11.9557 11.5647V10.1985L10.7634 9.00708L10.7643 9.0061L10.7624 9.00708C10.413 9.17998 10.0292 9.27275 9.63934 9.27759C9.23772 9.27756 8.84337 9.16651 8.50067 8.95728C7.46237 8.32859 6.90511 6.87715 7.01141 5.07544C7.01694 4.98258 7.0569 4.89513 7.12274 4.82935C7.18858 4.76363 7.27594 4.72353 7.36884 4.71802C9.17234 4.61228 10.6254 5.16887 11.2546 6.2063C11.6605 6.8793 11.6747 7.68968 11.3024 8.46704H11.3005L11.3024 8.46899L12.0778 9.24731L12.0798 9.24634C12.2095 8.7742 12.4403 8.33603 12.7556 7.96118L12.7565 7.96216L12.7556 7.96021C12.2017 6.88496 12.2002 5.7574 12.7624 4.82935C13.0817 4.30279 13.5605 3.86826 14.1638 3.53833C14.2642 3.48337 14.368 3.43117 14.4753 3.38208C15.441 2.94006 16.6751 2.73822 18.0632 2.8186ZM10.7184 7.88306C10.8694 7.4257 10.8324 6.98166 10.6013 6.60083C10.1579 5.86982 9.10879 5.45463 7.75848 5.46606V5.40845L7.75751 5.46704C7.7475 6.81598 8.16165 7.86394 8.89325 8.30688C9.27528 8.53799 9.72016 8.57639 10.1784 8.42505V8.42212L9.01532 7.26001C8.94706 7.18815 8.90956 7.09247 8.91083 6.99341C8.91213 6.89436 8.95206 6.7998 9.02216 6.72974C9.09233 6.65963 9.18758 6.61968 9.2868 6.61841C9.38587 6.61726 9.48157 6.65472 9.55341 6.7229L10.7175 7.88599V7.88501L10.7184 7.88306ZM17.6755 3.56177C15.7832 3.51758 14.279 4.05166 13.5505 5.02173C13.5019 5.08636 13.4572 5.15346 13.4157 5.22192L13.3464 5.34204C13.0239 5.95322 13.0177 6.65843 13.32 7.37329H13.321L15.8815 4.8186C15.9535 4.75032 16.0499 4.71284 16.1491 4.71411C16.2482 4.71542 16.3427 4.75552 16.4128 4.82544C16.4829 4.89545 16.5227 4.99012 16.5241 5.08911C16.5254 5.1882 16.4879 5.28385 16.4196 5.35571L13.86 7.91431L13.862 7.91626H13.86C14.5753 8.21683 15.2803 8.20924 15.8923 7.88892C15.9332 7.86749 15.9743 7.84479 16.0143 7.82056C17.1122 7.15613 17.7222 5.57868 17.6765 3.56274H17.696L17.6755 3.56177Z"
+                                                fill="#433131" stroke="white" stroke-width="0.00185804" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_110_2" x1="2.01" y1="-4.6413e-07"
+                                                    x2="20.3461" y2="23.0435" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#A8E063" />
+                                                    <stop offset="1" stop-color="#56AB2F" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg></div>
+                                    <div class="submenu-text">
+                                        <h4>Mealbot</h4>
+                                        <p>AI-powered meal planning</p>
+                                    </div>
+                                </a>
+                                <a href="quotebuilder.html" class="submenu-item">
+                                    <div class="submenu-icon icon-black"> <svg width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="24" height="24" rx="3" fill="url(#paint0_linear_111_9)" />
+                                            <path d="M18.9796 19.23L15.3096 17.9L17.8296 15.74L18.9796 19.23Z"
+                                                fill="#FFFEFE" />
+                                            <path
+                                                d="M12 5.48631C15.7248 5.48631 18.71 8.42131 18.71 12C18.71 15.5787 15.7248 18.5137 12 18.5137C8.27521 18.5136 5.29004 15.5787 5.29004 12C5.29005 8.42132 8.27521 5.48633 12 5.48631Z"
+                                                stroke="white" stroke-width="1.5" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_111_9" x1="12" y1="0" x2="12" y2="24"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#2C3338" />
+                                                    <stop offset="0.35" stop-color="#3A4146" />
+                                                    <stop offset="0.6" stop-color="#12181C" />
+                                                    <stop offset="1" stop-color="#050708" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg></div>
+                                    <div class="submenu-text">
+                                        <h4>QuoteBuilder</h4>
+                                        <p>Custom quotes & discounts</p>
+                                    </div>
+                                </a>
+                                <!-- <a href="#" class="submenu-item">
+                                    <div class="submenu-icon icon-green"><i class='bx bxs-star'></i></div>
+                                    <div class="submenu-text">
+                                        <h4>Reviews Showcase</h4>
+                                        <p>Display customer proof</p>
+                                    </div>
+                                </a>
+                                <div class="submenu-footer">
+                                    <a href="#featured-apps">View all apps <i class='bx bx-right-arrow-alt'></i></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#why-choose-us">Features</a></li>
+                    <!-- <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#footer">Contact</a></li> -->
+                </ul>
+                <a href="#featured-apps" class="btn btn-primary">Contact Us</a>
+                <!-- Hamburger -->
+                <button class="hamburger" id="hamburger" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <!-- Mobile Drawer -->
+            <div class="mobile-drawer" id="mobile-drawer">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#featured-apps" class="mobile-nav-link">Apps</a>
+                <a href="#why-choose-us" class="mobile-nav-link">Features</a>
+                <a href="#featured-apps" class="btn btn-primary mobile-cta">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg-glow"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge">
+                        <span class="status-dot"></span> Trusted by 10,000+ Shopify Merchants
+                    </div>
+                    <h1 class="hero-title">
+                        Supercharge Your <p class="text-gradient">Shopify Store</p> With Smart Apps
+                    </h1>
+                    <p class="hero-description">
+                        Boost revenue, automate operations, and delight customers with our suite of battle-tested
+                        Shopify apps — built for serious merchants.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#featured-apps" class="btn btn-primary">Explore Apps &rarr;</a>
+                        <a href="#" class="btn btn-outline">View on App Store <i
+                                class='bx bx-link-external icon-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="dashboard-mockup">
+                        <div class="mockup-body mockup-new-layout">
+                            <!-- Floating Card Top Left -->
+                            <div class="sales-card top-left">
+                                <span class="trend-up"><i class='bx bx-up-arrow-alt'></i> <span class="counter"
+                                        data-target="24.5" data-suffix="%">0</span></span>
+                                <h3><span class="counter" data-target="48290" data-prefix="$"
+                                        data-separator=",">0</span></h3>
+                                <p>Monthly Revenue</p>
+                            </div>
+
+                            <!-- Inner Container with Sidebar Layout -->
+                            <div class="dashboard-grid layout-sidebar-main">
+                                <!-- Sidebar -->
+                                <div class="dash-sidebar">
+                                    <div class="side-item active"></div>
+                                    <div class="side-item"></div>
+                                    <div class="side-item"></div>
+                                    <div class="side-item"></div>
+                                </div>
+
+                                <!-- Main Content Area -->
+                                <div class="dash-main-area">
+                                    <div class="dash-top-tabs">
+                                        <div class="tab-ph"></div>
+                                        <div class="tab-ph"></div>
+                                    </div>
+                                    <div class="dash-row dash-row-mt">
+                                        <div class="dash-box dash-small">
+                                            <div class="dash-box-label">Revenue</div>
+                                            <div class="dash-box-value text-green"><span class="counter"
+                                                    data-target="48" data-prefix="$" data-suffix="k">0</span></div>
+                                            <div class="dash-trend text-green"><i class='bx bx-up-arrow-alt'></i> <span
+                                                    class="counter" data-target="24" data-suffix="%">0</span></div>
+                                        </div>
+                                        <div class="dash-box dash-small">
+                                            <div class="dash-box-label">Orders</div>
+                                            <div class="dash-box-value text-blue"><span class="counter"
+                                                    data-target="1847" data-separator=",">0</span></div>
+                                            <div class="dash-trend text-blue"><i class='bx bx-up-arrow-alt'></i> <span
+                                                    class="counter" data-target="15" data-suffix="%">0</span></div>
+                                        </div>
+                                        <div class="dash-box dash-small">
+                                            <div class="dash-box-label">AOV</div>
+                                            <div class="dash-box-value text-purple"><span class="counter"
+                                                    data-target="98" data-prefix="$">0</span></div>
+                                            <div class="dash-trend text-purple"><i class='bx bx-up-arrow-alt'></i> <span
+                                                    class="counter" data-target="12" data-suffix="%">0</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="dash-chart-container dash-chart-container-mt">
+                                        <div class="dash-box-label dash-box-label-mb">Revenue — Last 12 Months</div>
+                                        <div class="dash-chart">
+                                            <div class="bar"></div>
+                                            <div class="bar"></div>
+                                            <div class="bar"></div>
+                                            <div class="bar h-60"></div>
+                                            <div class="bar h-50"></div>
+                                            <div class="bar h-80"></div>
+                                            <div class="bar h-65"></div>
+                                            <div class="bar h-55"></div>
+                                            <div class="bar h-80"></div>
+                                            <div class="bar h-45"></div>
+                                            <div class="bar bar-active h-95"></div>
+                                            <div class="bar h-60"></div>
+                                        </div>
+                                        <div class="dash-box-footer-row">
+                                            <div class="dash-box-label">Apps Installed</div>
+                                            <div class="dash-box-label text-green">3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Cards Right -->
+                            <div class="sales-card side-card side-top">
+                                <span class="trend-purple bg-purple-tint">
+                                    <div class="status-dot-purple"></div> Live
+                                </span>
+                                <h3><span class="counter" data-target="3.8" data-suffix="%">0</span></h3>
+                                <p>Conversion Rate</p>
+                            </div>
+                            <div class="sales-card side-card side-bottom">
+                                <span class="trend-blue"><i class='bx bx-cart'></i> <i class='bx bx-up-arrow-alt'></i>
+                                    <span class="counter" data-target="18.2" data-suffix="%">0</span></span>
+                                <h3><span class="counter" data-target="1847" data-separator=",">0</span></h3>
+                                <p>Orders This Month</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Apps -->
+        <section class="featured-apps" id="featured-apps">
+            <div class="container">
+                <div class="text-center"><span class="header-badge section-badge">Our Apps</span></div>
+                <h2 class="section-title text-center">Apps</h2>
+                <p class="section-subtitle">Top-rated applications built to solve real merchant problems and drive
+                    measurable revenue growth.</p>
+
+                <div class="apps-grid">
+                    <!-- App 1 -->
+                    <div class="app-card">
+                        <div class="app-card-header">
+                            <div class="app-icon icon-green">
+
+                                <svg width="30" height="30" viewBox="0 0 24 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="22.38" rx="3" fill="url(#paint0_linear_110_2)" />
+                                    <path
+                                        d="M20.2314 11.3485C20.2314 13.5316 19.3641 15.6253 17.8205 17.169C16.2768 18.7127 14.1831 19.5799 12 19.5799C9.81693 19.5799 7.72326 18.7127 6.17958 17.169C4.63591 15.6253 3.76868 13.5316 3.76868 11.3485L5.00662 11.3485C5.00662 13.2033 5.74342 14.9821 7.05494 16.2936C8.36646 17.6051 10.1453 18.3419 12 18.3419C13.8548 18.3419 15.6336 17.6051 16.9451 16.2936C18.2566 14.9821 18.9934 13.2033 18.9934 11.3485L20.2314 11.3485Z"
+                                        fill="#433131" />
+                                    <path d="M3.862 11.3486L10.9174 11.3486L10.8698 12.5432L3.862 12.5332V11.3486Z"
+                                        fill="#433131" />
+                                    <path d="M17.5436 11.3486H20.1194L20.102 12.5432L17.5436 12.5332V11.3486Z"
+                                        fill="#433131" />
+                                    <path
+                                        d="M9.57647 16.2548L15.1077 10.8539L15.1728 11.4644L15.7578 11.4016L11.9385 15.0972L16.2085 12.7424L16.1871 13.2078L16.6807 13.3974L10.2218 16.9794M14.313 11.6251L14.3241 12.2112L15.017 12.0647M15.4849 13.1788L15.2495 13.6677L15.9684 13.7657"
+                                        stroke="#523C3C" stroke-width="0.4" />
+                                    <path
+                                        d="M18.0632 2.8186C18.1563 2.82404 18.2443 2.86308 18.3102 2.92896C18.3761 2.99482 18.4152 3.08306 18.4206 3.17603C18.5609 5.56438 17.8593 7.49621 16.5378 8.38696C16.4952 8.41569 16.4518 8.44343 16.4079 8.46997C15.9509 8.74748 15.4261 8.89351 14.8913 8.89185C14.3381 8.88496 13.7938 8.7484 13.3034 8.49243H13.3024L13.1677 8.67505C12.8734 9.11263 12.715 9.62979 12.7165 10.1604V11.5647C12.7165 11.6654 12.6764 11.762 12.6052 11.8333C12.5339 11.9044 12.4374 11.9445 12.3366 11.9446C12.2357 11.9446 12.1384 11.9045 12.0671 11.8333C11.9959 11.762 11.9557 11.6654 11.9557 11.5647V10.1985L10.7634 9.00708L10.7643 9.0061L10.7624 9.00708C10.413 9.17998 10.0292 9.27275 9.63934 9.27759C9.23772 9.27756 8.84337 9.16651 8.50067 8.95728C7.46237 8.32859 6.90511 6.87715 7.01141 5.07544C7.01694 4.98258 7.0569 4.89513 7.12274 4.82935C7.18858 4.76363 7.27594 4.72353 7.36884 4.71802C9.17234 4.61228 10.6254 5.16887 11.2546 6.2063C11.6605 6.8793 11.6747 7.68968 11.3024 8.46704H11.3005L11.3024 8.46899L12.0778 9.24731L12.0798 9.24634C12.2095 8.7742 12.4403 8.33603 12.7556 7.96118L12.7565 7.96216L12.7556 7.96021C12.2017 6.88496 12.2002 5.7574 12.7624 4.82935C13.0817 4.30279 13.5605 3.86826 14.1638 3.53833C14.2642 3.48337 14.368 3.43117 14.4753 3.38208C15.441 2.94006 16.6751 2.73822 18.0632 2.8186ZM10.7184 7.88306C10.8694 7.4257 10.8324 6.98166 10.6013 6.60083C10.1579 5.86982 9.10879 5.45463 7.75848 5.46606V5.40845L7.75751 5.46704C7.7475 6.81598 8.16165 7.86394 8.89325 8.30688C9.27528 8.53799 9.72016 8.57639 10.1784 8.42505V8.42212L9.01532 7.26001C8.94706 7.18815 8.90956 7.09247 8.91083 6.99341C8.91213 6.89436 8.95206 6.7998 9.02216 6.72974C9.09233 6.65963 9.18758 6.61968 9.2868 6.61841C9.38587 6.61726 9.48157 6.65472 9.55341 6.7229L10.7175 7.88599V7.88501L10.7184 7.88306ZM17.6755 3.56177C15.7832 3.51758 14.279 4.05166 13.5505 5.02173C13.5019 5.08636 13.4572 5.15346 13.4157 5.22192L13.3464 5.34204C13.0239 5.95322 13.0177 6.65843 13.32 7.37329H13.321L15.8815 4.8186C15.9535 4.75032 16.0499 4.71284 16.1491 4.71411C16.2482 4.71542 16.3427 4.75552 16.4128 4.82544C16.4829 4.89545 16.5227 4.99012 16.5241 5.08911C16.5254 5.1882 16.4879 5.28385 16.4196 5.35571L13.86 7.91431L13.862 7.91626H13.86C14.5753 8.21683 15.2803 8.20924 15.8923 7.88892C15.9332 7.86749 15.9743 7.84479 16.0143 7.82056C17.1122 7.15613 17.7222 5.57868 17.6765 3.56274H17.696L17.6755 3.56177Z"
+                                        fill="#433131" stroke="white" stroke-width="0.00185804" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_110_2" x1="2.01" y1="-4.6413e-07" x2="20.3461"
+                                            y2="23.0435" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#A8E063" />
+                                            <stop offset="1" stop-color="#56AB2F" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="app-rating">
+                                <i class='bx bxs-star'></i> 4.9 (2k+)
+                            </div>
+                        </div>
+                        <h3 class="app-title">Mealbot</h3>
+                        <p class="app-description">Mealbot is a powerful Shopify app designed to simplify and automate
+                            subscription-based meal businesses. It enables merchants to create flexible meal plans,
+                            manage customer preferences, and streamline recurring orders — all within the Shopify
+                            ecosystem.</p>
+                        <div class="app-card-footer">
+                            <span class="price-tag">Free plan</span>
+                            <a href="mealbot.html" class="app-link">View App <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+
+                    <!-- App 2 -->
+                    <div class="app-card">
+                        <div class="app-card-header">
+                            <div class="app-icon icon-black">
+                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" rx="3" fill="url(#paint0_linear_111_9)" />
+                                    <path d="M18.9796 19.23L15.3096 17.9L17.8296 15.74L18.9796 19.23Z" fill="#FFFEFE" />
+                                    <path
+                                        d="M12 5.48631C15.7248 5.48631 18.71 8.42131 18.71 12C18.71 15.5787 15.7248 18.5137 12 18.5137C8.27521 18.5136 5.29004 15.5787 5.29004 12C5.29005 8.42132 8.27521 5.48633 12 5.48631Z"
+                                        stroke="white" stroke-width="1.5" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_111_9" x1="12" y1="0" x2="12" y2="24"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#2C3338" />
+                                            <stop offset="0.35" stop-color="#3A4146" />
+                                            <stop offset="0.6" stop-color="#12181C" />
+                                            <stop offset="1" stop-color="#050708" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+
+
+                            </div>
+                            <div class="app-rating">
+                                <i class='bx bxs-star'></i> 4.8 (1.5k+)
+                            </div>
+                        </div>
+                        <h3 class="app-title">QuoteBuilder</h3>
+                        <p class="app-description">The QuoteBuilder app in Shopify allows customers to add products to a
+                            quote and request a custom discount on the total order value. The requested discount is
+                            applied to the overall product total, which the merchant can review and approve based on
+                            business rules. This enables flexible pricing, supporting negotiation-driven sales while
+                            maintaining control over final pricing decisions.</p>
+                        <div class="app-card-footer">
+                            <span class="price-tag active">Free trial</span>
+                            <a href="quotebuilder.html" class="app-link">View App <i
+                                    class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us / Win Section -->
+        <section class="why-choose-us" id="why-choose-us">
+            <div class="container">
+                <div class="text-center badge-center"><span class="header-badge section-badge">Why Choose Us</span>
+                </div>
+                <h2 class="section-title text-center">Everything You Need to Win</h2>
+                <p class="section-subtitle">Our apps are designed around one core philosophy: helping your store grow.
+                </p>
+
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon icon-green">
+                            <i class='bx bx-line-chart'></i>
+                        </div>
+                        <h3 class="feature-title">Conversion Analysis</h3>
+                        <p class="feature-description">Powerful dashboards to track and analyze your Shopify store's
+                            KPIs in real-time.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-card">
+                        <div class="feature-icon icon-blue">
+                            <i class='bx bx-cog'></i>
+                        </div>
+                        <h3 class="feature-title">Save Time with Automation</h3>
+                        <p class="feature-description">Automate repetitive tasks so you can focus on growing your
+                            business faster.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon icon-orange">
+                            <i class='bx bx-plug'></i>
+                        </div>
+                        <h3 class="feature-title">Easy 1-click Integration</h3>
+                        <p class="feature-description">Seamless 1-click installation. Works out-of-the box with any
+                            Shopify themes.</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon icon-pink">
+                            <i class='bx bx-rocket'></i>
+                        </div>
+                        <h3 class="feature-title">Optimize Performance</h3>
+                        <p class="feature-description">Apps are optimized for speed, ensuring your theme's loading
+                            speeds stay fast.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Section -->
+        <!-- <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-badge header-badge section-badge text-center" style="margin: 0 auto 1rem auto; display: table;">Merchant Stories</div>
+                <h2 class="section-title text-center text-light">What Our Merchants Say</h2>
+                <p class="section-subtitle text-muted">Join thousands of successful merchants who trust our apps to run and scale their businesses.</p>
+                
+                <div class="testimonials-grid">
+
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                        </div>
+                        <p class="review-text">"I've been using their Sales Booster app for over a year now. It's increased my revenue by 20% without me having to lift a finger. The support team is also incredibly helpful!"</p>
+                        <div class="author">
+                            <div class="avatar bg-blue">AJ</div>
+                            <div class="author-info">
+                                <h4>Alex Johnson</h4>
+                                <p>CEO, TechGadgets Store</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="testimonial-card active-card">
+                        <div class="stars">
+                            <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                        </div>
+                        <p class="review-text">"These amazing Shopify apps have practically run my store completely. The automation saves me hours every week, giving me time back to actually run my business."</p>
+                        <div class="author">
+                            <div class="avatar bg-green">MC</div>
+                            <div class="author-info">
+                                <h4>Maria Chen</h4>
+                                <p>Founder, Beauty Aura</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                        </div>
+                        <p class="review-text">"The SEO Optimizer app has completely changed our organic traffic. We are now consistently on the first page for over 20 of our main product keywords and it keeps improving."</p>
+                        <div class="author">
+                            <div class="avatar bg-purple">SD</div>
+                            <div class="author-info">
+                                <h4>Sarah Davis</h4>
+                                <p>Director, Home Essentials</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- CTA Section -->
+        <section class="cta" id="cta">
+            <div class="container cta-container">
+                <h2 class="cta-title">Start Growing Your<br>Shopify Store Today</h2>
+                <p class="cta-subtitle">Join 10,000+ successful merchants who are using our apps to increase sales and
+                    save time.</p>
+                <a href="#featured-apps" class="btn btn-dark btn-lg">Browse All Apps <i
+                        class='bx bx-right-arrow-alt'></i></a>
+                <p class="cta-guarantee">*14-day free trial on all premium plans. Cancel anytime.</p>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo text-light">
+                    <span class="logo-box bg-green"><i class='bx bxs-shopping-bag' style='color:#0a0d14'></i></span>
+                    <span>AppStore Hub</span>
+                </a>
+                <p>Building powerful, reliable apps to help Shopify merchants scale their businesses globally.</p>
+                <div class="social-links">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+                        </svg></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Our Apps</h4>
+                    <ul>
+                        <li><a href="mealbot.html">Mealbot</a></li>
+                        <li><a href="quotebuilder.html">QuoteBuilder</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Partner Program</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2026 AppStoreHub. All rights reserved.</p>
+            <p>Made with <i class='bx bxs-heart text-green'></i> for Shopify Merchants.</p>
+        </div>
+    </footer>
+    <script src="./script/index.js"></script>
+</body>
+
+</html>
