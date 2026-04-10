@@ -6,6 +6,9 @@
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.08);
 }
+* {
+  box-sizing: border-box;
+}
 body.docs-page {
   background-color: #0b0f19;
   color: #ffffff;
@@ -17,6 +20,14 @@ body.docs-page {
   display: grid;
   grid-template-columns: var(--sidebar-width) 1fr;
   min-height: 100vh;
+  min-width: 0;
+}
+@media (max-width: 1024px) {
+  .docs-layout {
+    grid-template-columns: 1fr;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
 }
 /* --- Sidebar --- */
 .docs-sidebar {
@@ -100,11 +111,32 @@ body.docs-page {
   grid-column: 2;
   padding: 4rem 6rem;
   max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  min-width: 0;
+}
+@media (max-width: 1200px) {
+  .docs-main {
+    padding: 4rem 4rem;
+  }
 }
 @media (max-width: 1024px) {
   .docs-main {
     grid-column: 1;
     padding: 6rem 2rem;
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .docs-main {
+    padding: 5rem 1.75rem 3rem;
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .docs-main {
+    padding: 4.5rem 1rem 2rem;
+    max-width: 100%;
   }
 }
 .docs-section {
@@ -112,26 +144,43 @@ body.docs-page {
   scroll-margin-top: 100px;
 }
 .docs-section h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 10vw, 3.5rem);
   font-weight: 800;
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
   background: linear-gradient(90deg, #fff, #94a3b8);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 480px) {
+  .docs-section h1 {
+    font-size: clamp(1.75rem, 12vw, 2.25rem);
+    line-height: 1.2;
+  }
+}
 .docs-section h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
   font-weight: 700;
-  margin: 0.5rem 0 1rem;
+  margin: 2.5rem 0 1rem;
   color: #ffffff;
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 .docs-section h2 i {
   color: #00e676;
+}
+@media (max-width: 480px) {
+  .docs-section h2 {
+    font-size: 1.4rem;
+    flex-wrap: wrap;
+  }
 }
 .docs-section h4 {
   font-size: 1.1rem;
@@ -140,10 +189,13 @@ body.docs-page {
   color: #ffffff;
 }
 .docs-section p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   line-height: 1.8;
   color: #94a3b8;
   margin-block: 0.5rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 /* --- Components --- */
 .docs-card {
@@ -158,14 +210,24 @@ body.docs-page {
   border-color: rgba(255, 255, 255, 0.15);
 }
 .docs-card h3 {
-  font-size: 1.25rem;
+  font-size: clamp(1.1rem, 3vw, 1.25rem);
   margin-bottom: 1rem;
   color: #ffffff;
 }
+@media (max-width: 480px) {
+  .docs-card {
+    padding: 1.5rem;
+  }
+}
 .docs-feature-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
+}
+@media (max-width: 480px) {
+  .docs-feature-list {
+    grid-template-columns: 1fr;
+  }
 }
 .feature-item {
   display: flex;
@@ -190,6 +252,17 @@ body.docs-page {
   background: rgba(255, 255, 255, 0.02);
   border-radius: 12px;
   margin-bottom: 1rem;
+  transition: background 0.3s ease;
+}
+.step-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+@media (max-width: 480px) {
+  .step-card {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
 }
 .step-number {
   width: 36px;
@@ -207,6 +280,13 @@ body.docs-page {
 .step-number.blue {
   background: #3b82f6;
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+@media (max-width: 480px) {
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
 }
 /* --- Badges --- */
 .docs-badge {
@@ -257,10 +337,33 @@ pre {
   overflow-x: auto;
   border: 1px solid var(--glass-border);
   margin: 1.5rem 0;
+  max-width: 100%;
 }
 code {
   font-family: 'Fira Code', monospace;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+/* --- Footer --- */
+.docs-page footer {
+  margin-top: clamp(4rem, 10vw, 8rem) !important;
+  padding-top: 2rem;
+  border-top: 1px solid var(--glass-border);
+  color: #94a3b8;
   font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .docs-page footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  .docs-page footer span:last-child {
+    order: -1;
+  }
 }
 /* --- Mobile --- */
 .docs-hamburger {

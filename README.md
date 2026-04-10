@@ -38,10 +38,7 @@ Marketing site for **AppStoreHub** — a suite of Shopify apps built for merchan
 
 1. Clone the repo
 2. Open `index.html` in a browser — no build step needed for the static site
-3. To edit styles, modify the `.less` files and compile:
-   ```bash
-   npx lessc css/styles.less css/styles.css
-   ```
+3. To edit styles, modify the `.less` files
 
 ## Responsive
 
